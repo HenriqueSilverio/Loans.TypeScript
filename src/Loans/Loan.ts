@@ -7,9 +7,9 @@ export type LoanDTO = {
 }
 
 export default abstract class Loan {
-  public abstract get type(): string
+  public abstract readonly type: string
 
-  public abstract get interestRate(): number
+  public abstract readonly interestRate: number
 
   protected abstract readonly specification: Specification<Customer>
 
