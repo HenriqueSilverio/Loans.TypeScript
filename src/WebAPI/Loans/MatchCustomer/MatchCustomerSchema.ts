@@ -12,4 +12,6 @@ const MatchCustomerSchema = z.object({
   body,
 })
 
+export type MatchCustomerInput = typeof MatchCustomerSchema
+
 export default MatchCustomerSchema

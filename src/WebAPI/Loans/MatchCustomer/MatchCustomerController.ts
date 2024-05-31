@@ -1,14 +1,14 @@
 import { Request, Response } from 'express'
 import Middleware from '../../Middleware'
-import MatchingCustomerSchema from './MatchCustomerSchema'
+import { MatchCustomerInput } from './MatchCustomerSchema'
 import GetMatchingCustomerProfile from '../../../Loans/Services/GetMatchingCustomerProfile'
 
 export default class MatchCustomer extends Middleware {
-  private readonly schema: typeof MatchingCustomerSchema
+  private readonly schema: MatchCustomerInput
 
   private readonly useCase: GetMatchingCustomerProfile
 
-  constructor(schema: typeof MatchingCustomerSchema, useCase: GetMatchingCustomerProfile) {
+  constructor(schema: MatchCustomerInput, useCase: GetMatchingCustomerProfile) {
     super()
     this.schema = schema
     this.useCase = useCase
