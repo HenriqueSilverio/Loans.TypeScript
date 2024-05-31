@@ -1,12 +1,12 @@
 import Customer from '../Customer'
-import { LoanDTO } from '../Loan'
+import { LoanData } from '../Loan'
 import ConsignmentLoan from '../Consignment/ConsignmentLoan'
 import GuaranteedLoan from '../Guaranteed/GuaranteedLoan'
 import PersonalLoan from '../Personal/PersonalLoan'
 
 export type GetMatchingCustomerProfileResponse = {
   customer: string,
-  loans: Array<LoanDTO>,
+  loans: Array<LoanData>,
 }
 
 export default class GetMatchingCustomerProfile {

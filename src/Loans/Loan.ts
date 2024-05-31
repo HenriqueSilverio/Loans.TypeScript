@@ -1,7 +1,7 @@
 import Customer from './Customer'
 import { Specification } from './Specifications/Base/CompositeSpecification'
 
-export type LoanDTO = {
+export type LoanData = {
   type: string,
   interest_rate: number,
 }
@@ -17,7 +17,7 @@ export default abstract class Loan {
     return this.specification.isSatisfiedBy(customer)
   }
 
-  public toJSON(): LoanDTO {
+  public toJSON(): LoanData {
     return {
       type: this.type,
       interest_rate: this.interestRate,
