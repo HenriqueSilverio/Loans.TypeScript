@@ -72,8 +72,8 @@ export default class WebApplication {
     })
   }
 
-  public get(path: string, ...handlers: Array<RequestHandler>): void {
-    this.application.get(path, ...handlers)
+  public post(path: string, ...handlers: Array<RequestHandler>): void {
+    this.application.post(path, ...handlers)
   }
 
   public start(): void {
