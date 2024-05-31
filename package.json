@@ -1,7 +1,7 @@
 {
   "name": "loans-ts",
   "version": "1.0.0",
-  "description": "Solving a Back-End BR challenge.",
+  "description": "Back-End BR loans challenge solution.",
   "engines": {
     "node": "^20",
     "npm": "^10"
