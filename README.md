@@ -1,6 +1,6 @@
 # Loans.TypeScript
 
-My solution to the Back-End BR "[loans](https://github.com/backend-br/desafios/blob/master/loans/PROBLEM.md)" challenge, implemented with TypeScript.
+My solution (TypeScript version) to the Back-End BR "[loans](https://github.com/backend-br/desafios/blob/master/loans/PROBLEM.md)" challenge.
 
 ## Prerequisites
 
@@ -16,10 +16,10 @@ cp .env.example .env
 
 Then fill the values in your `.env` file accordingly.
 
-| Variable            | Description               |
-| :------------------ | :------------------------ |
-| `SERVICE_NAME`      | String. JWT sign secret.  |
-| `SERVICE_HTTP_PORT` | Number. HTTP server port. |
+| Variable            | Description                  |
+| :------------------ | :--------------------------- |
+| `SERVICE_NAME`      | String. Application's name.  |
+| `SERVICE_HTTP_PORT` | Number. HTTP server port.    |
 
 ## Building and Running with Docker
 
