@@ -21,7 +21,7 @@
   "author": "Henrique Silvério",
   "license": "GPL-3.0",
   "dependencies": {
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "helmet": "^7.1.0",
     "pino-http": "^10.1.0",
     "require-env": "^0.2.1",
