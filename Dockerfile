@@ -1,7 +1,7 @@
 #
 # Stage 1: build
 #
-FROM node:20.13.1-alpine@sha256:291e84d956f1aff38454bbd3da38941461ad569a185c20aa289f71f37ea08e23 AS build
+FROM node:22.11.0-alpine@sha256:b64ced2e7cd0a4816699fe308ce6e8a08ccba463c757c00c14cd372e3d2c763e AS build
 
 USER node
 
@@ -20,7 +20,7 @@ RUN npm run build
 #
 # Stage 2: clean
 #
-FROM node:20.13.1-alpine@sha256:291e84d956f1aff38454bbd3da38941461ad569a185c20aa289f71f37ea08e23 AS clean
+FROM node:22.11.0-alpine@sha256:b64ced2e7cd0a4816699fe308ce6e8a08ccba463c757c00c14cd372e3d2c763e AS clean
 
 USER node
 
@@ -35,13 +35,14 @@ RUN npm ci --only=production
 #
 # Stage 3: production
 #
-FROM node:20.13.1-alpine@sha256:291e84d956f1aff38454bbd3da38941461ad569a185c20aa289f71f37ea08e23
+FROM node:22.11.0-alpine@sha256:b64ced2e7cd0a4816699fe308ce6e8a08ccba463c757c00c14cd372e3d2c763e
 
 ARG USERNAME=nonroot
 ARG USERHOME=/home/${USERNAME}
 
 ENV NODE_ENV=production
 ENV SERVICE_NAME="Loans App"
+ENV SERVICE_HTTP_PORT=3000
 
 RUN deluser --remove-home node && \
   addgroup \
